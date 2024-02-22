@@ -1,0 +1,13 @@
+SiteID,SiteCode,SiteName,Latitude,Longitude,LatLongDatumID,Elevation_m,VerticalDatum,LocalX,LocalY,LocalProjectionID,PosAccuracy_m,State,County,Comments,SiteType
+1,LR_WaterLab_AA,Logan River at the Utah Water Research Laboratory west bridge,41.739034,-111.795742,3,1414.0,NGVD29,,,,,Utah,Cache,,Stream
+2,LR_Mendon_AA,Logan River at Mendon Road (600 South),41.720533,-111.886928,3,1353.469604,NGVD29,,,,,Utah,Cache,,Stream
+3,LR_MainStreet_BA,Logan River at Main Street (Highway 89/91) Bridge,41.721091,-111.835096,3,1377.0,NGVD29,,,,,Utah,Cache,,Stream
+4,LR_TWDEF_C,Climate Station at TW Daniels Experimental Forest,41.864805,-111.507494,3,2629.2,NGVD29,,,,,Utah,Cache,,Atmosphere
+5,LR_GC_C,Climate Station at Logan River Golf Course,41.705643,-111.854268,3,1364.89,NGVD29,,,,,Utah,Cache,,Atmosphere
+6,LR_Wilkins_R,Wilkins Repeater,41.905986,-111.553771,3,2133.6,NGVD29,,,,,Utah,Cache,,Atmosphere
+7,LR_TG_C,Climate Station at Tony Grove,41.885493,-111.568767,3,1927.86,NGVD29,,,,,Utah,Cache,,Atmosphere
+8,LR_FB_C,Climate Station at Franklin Basin,41.949815,-111.581352,3,2109.52,NGVD29,,,,,Utah,Cache,,Atmosphere
+9,LR_TG_BA,Logan River near Tony Grove,41.875846,-111.564533,3,1886.1,NGVD29,,,,,Utah,Cache,,Stream
+10,LR_FB_BA,Logan River near Franklin Basin,41.9502,-111.580553,3,2110.3,NGVD29,,,,,Utah,Cache,,Stream
+11,LR_RH_SD,River Heights Bridge Storm Drain,41.725147,-111.825917,3,1373.0,NGVD29,,,,,Utah,Cache,,Storm sewer
+13,USGS_LR_StateDam,USGS Logan River Above State Dam,41.74355,-111.7839806,2,1427.01264,GNSS2,,,,,Utah,Cache,,Stream

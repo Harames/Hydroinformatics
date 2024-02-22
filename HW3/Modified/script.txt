@@ -1,0 +1,8 @@
+.open logan_river.sqlite
+.mode csv
+.import --skip 1 sites.csv sites
+.import --skip 1 variables.csv variables
+.import --skip 1 methods.csv methods
+.import --skip 1 sources.csv sources
+.import --skip 1 datavalues.csv datavalues
+.exit

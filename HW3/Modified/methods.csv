@@ -1,0 +1,27 @@
+MethodID,MethodDescription,MethodLink
+1,Battery voltage measured by a Campbell Scientific datalogger.,http://www.campbellsci.com/cr3000
+2,Panel temperature measured by a Campbell Scientific datalogger.,http://www.campbellsci.com/cr3000
+3,Relative humidity within the station enclosure measured by a Campbell Scientific CS210.,http://www.campbellsci.com/cs210
+4,Indicator of the status of the enclosure door recorded by a Campbell Scientific 18166.,http://www.campbellsci.com/p18166
+5,Counter of the number of scans made within the specified time period recorded by a Campbell Scientific datalogger.,http://www.campbellsci.com/cr3000
+6,Water temperature measured using a YSI EXO multi-parameter water quality sonde.,http://www.exowater.com
+7,Specific conductance measured using a YSI EXO multi-parameter water quality sonde.,http://www.exowater.com
+8,pH measured using a YSI EXO multi-parameter water quality sonde.,http://www.exowater.com
+9,Dissolved oxygen concentration measured optically using a YSI EXO multi-parameter water quality sonde.,http://www.exowater.com
+10,Dissolved oxygen measured optically using a YSI EXO multi-parameter water quality sonde. Corrected with temperature and local barometric pressure at the time of calibration.,http://www.exowater.com
+11,Dissolved oxygen measured optically using a YSI EXO multi-parameter water quality sonde.  Percent saturation output fixed to 100% regardless of barometric pressure.,http://www.exowater.com
+12,Time stamp on the output time of the YSI EXO sonde.,http://www.exowater.com
+13,Power delivered to the YSI EXO sonde.,http://www.exowater.com
+14,Turbidity measured using a Forest Technology Systems DTS-12 turbidity sensor. Average of a burst sample of 100 measurements over 5 seconds.,http://www.ftsenvironmental.com/products/sensors/dts12/
+15,Turbidity measured using a Forest Technology Systems DTS-12 turbidity sensor. Median of a burst sample of 100 measurements over 5 seconds.,http://www.ftsenvironmental.com/products/sensors/dts12/
+16,Turbidity measured using a Forest Technology Systems DTS-12 turbidity sensor. Minimum of a burst sample of 100 measurements over 5 seconds.,http://www.ftsenvironmental.com/products/sensors/dts12/
+17,Turbidity measured using a Forest Technology Systems DTS-12 turbidity sensor. Maximum of a burst sample of 100 measurements over 5 seconds.,http://www.ftsenvironmental.com/products/sensors/dts12/
+18,Turbidity measured using a Forest Technology Systems DTS-12 turbidity sensor. Variance of a burst sample of 100 measurements over 5 seconds.,http://www.ftsenvironmental.com/products/sensors/dts12/
+19,Turbidity measured using a Forest Technology Systems DTS-12 turbidity sensor. Best Easy Systematic Estimator of a burst sample of 100 measurements over 5 seconds.,http://www.ftsenvironmental.com/products/sensors/dts12/
+20,Water temperature measured using a Forest Technology Systems DTS-12 turbidity sensor. Average of a burst sample of 100 measurements over 5 seconds.,http://www.ftsenvironmental.com/products/sensors/dts12/
+21,Indicator as to whether the turbidity sensor performed a wipe (0) or not (1). ,http://www.ftsenvironmental.com/products/sensors/dts12/
+22,Water level measured using a Campbell Scientific CS451 Pressure Transducer. Average of a burst sample of 25 measurements over 20 seconds.,http://www.campbellsci.com/cs451
+23,Water temperature measured using a Campbell Scientific CS451 Pressure Transducer.,http://www.campbellsci.com/cs451
+24,Counter of the number of NaN values returned by the Campbell Scientific CS451 Pressure Transducer within the measurement period.,http://www.campbellsci.com/cs451
+25,Offset that reflects the difference between the stage plate and Campbell Scientific CS451 Pressure Transducer depth. Constant value that is manually adjusted to account for sensor drift.,
+26,Gauge measurements taken by the USGS,https://waterdata.usgs.gov/nwis
