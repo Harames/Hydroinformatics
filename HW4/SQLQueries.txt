@@ -1,0 +1,76 @@
+//Part 1
+SELECT SiteID, 
+	MIN(LocalDateTime) AS StartDate, 
+	MAX(LocalDateTime) AS EndDate, 
+	COUNT(DataValue) AS Count, 
+	MIN(DataValue) AS MinTemp, 
+	MAX(DataValue) AS MaxTemp, 
+	ROUND(AVG(DataValue), 2) AS AvgTemp
+FROM datavalues
+WHERE QualityControlLevelID = 1 
+	AND VariableID = 1 
+	AND DataValue <> -9999
+GROUP BY SiteID
+
+//Part 2
+SELECT d.SiteID, COUNT(d.DataValue) AS TotalCount, IFNULL(s.ExceedCount, 0) AS ExceedCount, ROUND((( IFNULL(s.ExceedCount, 0)*1.0) / (COUNT(d.DataValue)*1.0))*100, 2) AS PercentExceed
+FROM datavalues d
+LEFT JOIN (SELECT SiteID, Count(DataValue) as ExceedCount
+	 FROM datavalues
+	 WHERE QualityControlLevelID = 1
+	 	AND VariableID = 1
+	 	AND DataValue > 20
+	 	AND QualityControlLevelID = 1
+		GROUP BY SiteID) s
+ON d.SiteID = s.SiteID
+WHERE d.QualityControlLevelID = 1 AND d.VariableID = 1 AND d.DataValue <> -9999
+GROUP BY d.SiteID
+
+//Part 3
+SELECT  LocalDateTime , DataValue 
+FROM datavalues 
+WHERE SiteID = 1 
+	AND DATE(LocalDateTime) >= '2021-06-01' 
+	AND DATE(LocalDateTime) <= '2021-08-31' 
+	AND VariableID = 1 
+	AND DataValue <> -9999
+	AND QualityControlLevelID = 1
+
+SELECT  LocalDateTime , DataValue 
+FROM datavalues 
+WHERE SiteID = 2 
+	AND DATE(LocalDateTime) >= '2021-06-01' 
+	AND DATE(LocalDateTime) <= '2021-08-31' 
+	AND VariableID = 1 
+	AND DataValue <> -9999
+	AND QualityControlLevelID = 1
+
+//Part 4
+SELECT strftime("%m", d.LocalDateTime) AS Month, ROUND((( IFNULL(s.ExceedCount, 0)*1.0) / (COUNT(d.DataValue)*1.0))*100, 2) AS PercentExceed
+FROM datavalues d
+LEFT JOIN (
+	SELECT strftime("%m", LocalDateTime) AS Month2, COUNT(DataValue) AS ExceedCount
+	FROM datavalues 
+	WHERE SiteID = 2 
+		AND QualityControlLevelID = 1 
+		AND VariableID = 1 
+		AND DataValue > 20
+	GROUP BY Month2) s
+ON Month = Month2
+WHERE d.SiteID = 2 AND d.QualityControlLevelID = 1 AND d.VariableID = 1 AND d.DataValue <> -9999
+GROUP BY Month
+
+//Part 5
+SELECT d.SiteID, ROUND((( IFNULL(s.ExceedCount, 0)*1.0) / (COUNT(d.DataValue)*1.0))*100, 2) AS PercentExceed
+FROM datavalues d
+LEFT JOIN (SELECT SiteID, Count(DataValue) as ExceedCount
+	 FROM datavalues
+	 WHERE QualityControlLevelID = 1
+	 	AND VariableID = 1
+	 	AND DataValue > 20
+	 	AND QualityControlLevelID = 1
+		AND strftime("%m", LocalDateTime) = "07"
+		GROUP BY SiteID) s
+ON d.SiteID = s.SiteID
+WHERE d.QualityControlLevelID = 1 AND d.VariableID = 1 AND d.DataValue <> -9999 AND strftime("%m", d.LocalDateTime) = "07"
+GROUP BY d.SiteID
